@@ -23,7 +23,7 @@ public class Elements {
     public WebElement loc;
     @FindBy (id = "loginButton")
     public WebElement lgn;
-    @FindBy(xpath = "(//*[@id='navbarSupportedContent']/ul/li[1]/i[1]")
+    @FindBy(xpath = "//li[@class='nav-item identifier']")
     public WebElement myAcHo;
 
 }

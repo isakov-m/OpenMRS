@@ -26,12 +26,15 @@ public class Us2MyAccount extends BaseDriver {
         elements.pss.sendKeys("Admin123");
         elements.loc.click();
         elements.lgn.click();
-        elements.myAcHo.click();
+       // elements.myAcHo.b;
 
-        Actions aksiyonDriver=new Actions(driver);
+        MyFunc.Bekle(3);
 
-        Actions actions = new Actions(driver);
-        actions.moveToElement(elements.myAcHo).perform();
+        Actions aksiyonlar=new Actions(driver);
+        Action aksiyon=aksiyonlar.moveToElement(elements.myAcHo).build();
+        aksiyon.perform();
+
+
 
         BekleVeKapat();
     }
