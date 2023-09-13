@@ -4,6 +4,7 @@ import Utlity.BaseDriver;
 import Utlity.MyFunc;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Us5MyAccount extends BaseDriver {
@@ -32,8 +33,8 @@ public class Us5MyAccount extends BaseDriver {
         elements.clck.click();
 
 
-        //Assert.assertTrue(elements.dogrulama.getText().contains("changePassword"), "Dogrulanamadi");
-       //
+      Assert.assertTrue(elements.dogrulama.getText().contains("Password"), "Dogrulanamadi");
+
         //Assert.assertTrue(elements.dogrulama2.getText().contains("changeDefaults"), "Dogrulanamadi");
 
 
