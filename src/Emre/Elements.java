@@ -25,5 +25,12 @@ public class Elements {
     public WebElement lgn;
     @FindBy(xpath = "//li[@class='nav-item identifier']")
     public WebElement myAcHo;
+    @FindBy (xpath = "//a[@href='/openmrs/adminui/myaccount/myAccount.page']")
+    public WebElement clck;
+    //@FindBy(xpath = "//a[@href='/openmrs/adminui/myaccount/changePassword.page']")
+    //public WebElement dogrulama;
+   // @FindBy(xpath = "//a[@href='/openmrs/adminui/myaccount/changeDefaults.page']")
+   // public  WebElement dogrulama2;
+
 
 }

@@ -2,12 +2,11 @@ package Emre;
 
 import Utlity.BaseDriver;
 import Utlity.MyFunc;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class Us2MyAccount extends BaseDriver {
+public class Us5MyAccount extends BaseDriver {
 
 
     @Test
@@ -26,13 +25,23 @@ public class Us2MyAccount extends BaseDriver {
         elements.pss.sendKeys("Admin123");
         elements.loc.click();
         elements.lgn.click();
-       // elements.myAcHo.b;
-
         MyFunc.Bekle(3);
-
         Actions aksiyonlar=new Actions(driver);
         Action aksiyon=aksiyonlar.moveToElement(elements.myAcHo).build();
         aksiyon.perform();
+        elements.clck.click();
+
+
+        //Assert.assertTrue(elements.dogrulama.getText().contains("changePassword"), "Dogrulanamadi");
+       //
+        //Assert.assertTrue(elements.dogrulama2.getText().contains("changeDefaults"), "Dogrulanamadi");
+
+
+
+
+        MyFunc.Bekle(3);
+
+
 
 
 
