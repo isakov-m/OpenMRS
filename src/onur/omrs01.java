@@ -25,13 +25,19 @@ public class omrs01 extends BaseDriver {
     @Test(dataProvider = "loginData")
     public void TestLogin(String userName, String password) {
         // Web sayfasına git
-        driver.get("https://demo.openmrs.org/openmrs/login.htm");
+        driver.get("https://openmrs.org");
 
-        // Kullanıcı adı ve şifreyi doldur
-        driver.findElement(By.id("username")).sendKeys(userName);
-        driver.findElement(By.id("password")).sendKeys(password);
+        WebElement demo= driver.findElement(By.className("zak-button"));
+        demo.click();
+        MyFunc.Bekle(1);
 
-        // Diğer işlemleri gerçekleştir
+        WebElement omrs2= driver.findElement(By.xpath("//*[@data-id=\"0d818f0\"]"));
+        omrs2.click();
+        MyFunc.Bekle(1);
+
+        WebElement enteromrs2d= driver.findElement(By.cssSelector("a[href*='https://demo.openmrs.org/openmrs/login.htm'"));
+        enteromrs2d.click();
+        MyFunc.Bekle(1);
 
         WebElement login = driver.findElement(By.id("loginButton"));
         login.click();
