@@ -35,17 +35,12 @@ public class Us5MyAccount extends BaseDriver {
 
       Assert.assertTrue(elements.dogrulama.getText().contains("Password"), "Dogrulanamadi");
 
-        //Assert.assertTrue(elements.dogrulama2.getText().contains("changeDefaults"), "Dogrulanamadi");
+        Assert.assertTrue(!elements.dogrulama2.getText().contains("Defaults"), "Dogrulanamadi");
 
 
 
 
         MyFunc.Bekle(3);
-
-
-
-
-
         BekleVeKapat();
     }
 }
