@@ -1,7 +1,6 @@
 package Senol;
 
 import Utlity.BaseDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,39 +8,36 @@ public class OMRS06POM extends BaseDriver {
 
     @Test
 
-    public void  OMRS06HastaListesindeArama(){
+    public void OMRS06HastaListesindeArama() {
 
-        OMRS06Elements elements=new OMRS06Elements();
+        Elements e = new Elements();
 
-        driver.get("https://openmrs.org");
+        toBeClickable(e.demoButton);
+        e.demoButton.click();
+        elementeKadarKaydir(e.enterOpenMrs2Demo);
+        e.enterOpenMrs2Demo.click();
+        e.userName.sendKeys("admin");
+        e.password.sendKeys("Admin123");
+        e.location.click();
+        e.loginButton.click();
 
-        wait.until(ExpectedConditions.elementToBeClickable(elements.demoButton));
+        toBeClickable(e.findPatientRecord);
+        e.findPatientRecord.click();
+        e.searchBox.sendKeys("iris");
+        e.patientSelect.click();
 
-        elements.demoButton.click();
-        elements.enterOpenMrs2Demo.click();
-        elements.userName.sendKeys("admin");
-        elements.password.sendKeys("Admin123");
-        elements.location.click();
-        elements.loginButton.click();
-
-        wait.until(ExpectedConditions.elementToBeClickable(elements.findPatientRecord));
-        elements.findPatientRecord.click();
-
-        elements.searchBox.sendKeys("iris");
-
-        elements.patientSelect.click();
-
-        wait.until(ExpectedConditions.visibilityOf(elements.dashBoard));
-        Assert.assertTrue(elements.dashBoard.getText().contains("DIAGNOSES"));
+        visibilityOf(e.dashBoard);
+        Assert.assertTrue(e.dashBoard.getText().contains("DIAGNOSES"));
 
         driver.navigate().back();
 
-        elements.searchBox.sendKeys("Senol");
+        e.searchBox.sendKeys("Senol");
 
-        wait.until(ExpectedConditions.visibilityOf(elements.notMatching));
-        Assert.assertTrue(elements.notMatching.isDisplayed());
+        visibilityOf(e.notMatching);
+        Assert.assertTrue(e.notMatching.isDisplayed());
 
-        bekleVeKapat();
+
+
 
     }
 }

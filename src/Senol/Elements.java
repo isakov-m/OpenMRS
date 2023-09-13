@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class OMRS06Elements {
-    public OMRS06Elements() {
+public class Elements {
+    public Elements() {
         PageFactory.initElements(BaseDriver.driver, this);
 
     }

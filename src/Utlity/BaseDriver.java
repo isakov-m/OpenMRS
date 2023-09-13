@@ -53,5 +53,8 @@ public class BaseDriver {
         WebDriverWait wait=new WebDriverWait(BaseDriver.driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(e));
     }
+    public void toBeClickable(WebElement e){
+        WebDriverWait wait=new WebDriverWait(BaseDriver.driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(e));
 
-}
+}}
