@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class Elements {
 
-
     @FindBy(css = "[name='username']")
     public WebElement username;
     @FindBy(css = "[name='password']")
