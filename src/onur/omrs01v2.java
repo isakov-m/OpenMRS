@@ -16,11 +16,11 @@ public class omrs01v2 extends BaseDriver {
 
     private WebDriver driver;
 
-    @BeforeMethod
+   /* @BeforeMethod
     public void setUp() {
 
         driver = new ChromeDriver();
-    }
+    }*/
 
     @Test(dataProvider = "loginData")
     public void TestLogin(String userName, String password) {
