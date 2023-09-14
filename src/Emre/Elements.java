@@ -10,7 +10,6 @@ public class Elements {
         PageFactory.initElements(BaseDriver.driver, this);
     }
 
-
     @FindBy(xpath = "//a[@href='https://openmrs.org/demo/']")
     public WebElement grs;
     @FindBy(xpath = "//span[contains(text(), 'Enter the OpenMRS 2 Demo')]")
@@ -31,6 +30,17 @@ public class Elements {
     public WebElement dogrulama;
     @FindBy(xpath = "//a[@href='/openmrs/adminui/myaccount/changeDefaults.page']")
     public  WebElement dogrulama2;
+    @FindBy(id = "appointmentschedulingui-homeAppLink-appointmentschedulingui-homeAppLink-extension")
+    public WebElement randevu;
+    @FindBy(id = "appointmentschedulingui-manageAppointments-app")
+    public WebElement ranynt;
+    @FindBy(id = "patient-search")
+    public WebElement suchen;
+    @FindBy (xpath = "//td[text()='Ali Cabbar']")
+    public WebElement Id;
+    @FindBy (xpath = "//div[@class='text']/p")
+    public WebElement dgrlmaeror;
+
 
 
 }

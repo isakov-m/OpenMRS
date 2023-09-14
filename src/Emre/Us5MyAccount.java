@@ -9,38 +9,31 @@ import org.testng.annotations.Test;
 
 public class Us5MyAccount extends BaseDriver {
 
-
     @Test
-    public  void  TS02(){
+    public  void  TS05(){
 
-        driver.get("https://openmrs.org/");
+        Elements e=new Elements();
 
-        Elements elements=new Elements();
+        e.grs.click();
         MyFunc.Bekle(3);
-
-
-        elements.grs.click();
-        MyFunc.Bekle(3);
-        elements.Mr2D.click();
-        elements.usrnm.sendKeys("admin");
-        elements.pss.sendKeys("Admin123");
-        elements.loc.click();
-        elements.lgn.click();
+        e.Mr2D.click();
+        e.usrnm.sendKeys("admin");
+        e.pss.sendKeys("Admin123");
+        e.loc.click();
+        e.lgn.click();
         MyFunc.Bekle(3);
         Actions aksiyonlar=new Actions(driver);
-        Action aksiyon=aksiyonlar.moveToElement(elements.myAcHo).build();
+        Action aksiyon=aksiyonlar.moveToElement(e.myAcHo).build();
         aksiyon.perform();
-        elements.clck.click();
+        e.clck.click();
+
+      Assert.assertTrue(e.dogrulama.getText().contains("Password"), "Dogrulanamadi");
+
+        Assert.assertTrue(!e.dogrulama2.getText().contains("Defaults"), "Dogrulanamadi");
 
 
-      Assert.assertTrue(elements.dogrulama.getText().contains("Password"), "Dogrulanamadi");
-
-        Assert.assertTrue(!elements.dogrulama2.getText().contains("Defaults"), "Dogrulanamadi");
 
 
 
-
-        MyFunc.Bekle(3);
-        BekleVeKapat();
     }
 }
