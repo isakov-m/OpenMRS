@@ -12,7 +12,7 @@ public class OMRS04 extends BaseDriver {
     @Test
     public void OMRS04() {
 
-        //driver.get("https://demo.openmrs.org/openmrs/login.htm");
+        driver.get("https://demo.openmrs.org/openmrs/login.htm");
 
         Elements e = new Elements();
         e.username.sendKeys("Admin");
