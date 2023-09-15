@@ -16,7 +16,7 @@ public class Elements {
     public  WebElement Mr2D;
     @FindBy(id = "username")
     public WebElement usrnm;
-    @FindBy (id = "password")
+    @FindBy (id = "password ")
     public WebElement pss;
     @FindBy (id = "Inpatient Ward")
     public WebElement loc;
