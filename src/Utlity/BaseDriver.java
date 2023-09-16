@@ -37,11 +37,11 @@ public class BaseDriver {
 
     }
 
-  /* @AfterClass
+   @AfterClass
   public void bekleVeKapat() {
         MyFunc.Bekle(5);
         driver.quit();
-    } */
+    }
 
     public void elementeKadarKaydir(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
