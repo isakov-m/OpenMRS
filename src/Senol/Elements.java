@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class Elements {
 
 
@@ -85,6 +87,20 @@ public class Elements {
 
     @FindBy(css = "[id='patient2-text']")
     public WebElement patient2;
+
+    @FindBy(id = "patient-search-results-table_info")
+    public WebElement showingEntries;
+
+    @FindBy(css = "tbody[role='alert']>tr")
+    public List<WebElement> numberOfLineS;
+
+    @FindBy(css = "div[id='patient-search-results-table_paginate'] >span>a[tabindex]")
+    public List<WebElement> pageNumber;
+
+    @FindBy (css = "div[class='dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers'] span a")
+    public List<WebElement>sayfaNumber;
+
+
 
 
 
