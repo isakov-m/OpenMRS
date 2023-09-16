@@ -37,8 +37,8 @@ public class BaseDriver {
 
     }
 
-    @AfterClass
-    public void bekleVeKapat() {
+   @AfterClass
+  public void bekleVeKapat() {
         MyFunc.Bekle(5);
         driver.quit();
     }
