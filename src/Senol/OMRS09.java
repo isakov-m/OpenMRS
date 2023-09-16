@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class OMRS09 extends BaseDriver {
     @Test
-    public void OMRS06HastaListesindeArama() {
+    public void OMRS09HastaKayıtlarınıBirleştirme() {
 
         Elements e = new Elements();
 
