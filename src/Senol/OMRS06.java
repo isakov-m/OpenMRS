@@ -4,7 +4,7 @@ import Utlity.BaseDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class OMRS06POM extends BaseDriver {
+public class OMRS06 extends BaseDriver {
 
     @Test
 
@@ -23,7 +23,7 @@ public class OMRS06POM extends BaseDriver {
 
         toBeClickable(e.findPatientRecord);
         e.findPatientRecord.click();
-        e.searchBox.sendKeys("iris");
+        e.searchBox.sendKeys("Ali Cabber");
         e.patientSelect.click();
 
         visibilityOf(e.dashBoard);
