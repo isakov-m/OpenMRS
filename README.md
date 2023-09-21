@@ -26,6 +26,9 @@ https://github.com/isakov-m/TechnoStudyTR.git
 # Projenin JDK sını seç
 jdk1.8
 
+# .gitignore dosyasini acip oraya .idea ve *.iml yi ekleyecegiz, daha once eklenmisse dokunmayacagiz.
+
+
 # İntellijide Module ayarlarını aç
 # Maven den Seleniumu indir
 org.seleniumhq.selenium:selenium-java:4.11.0

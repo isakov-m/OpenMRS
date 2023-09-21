@@ -68,6 +68,8 @@
       <root url="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/4.11.0/selenium-support-4.11.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/selenium-support-4.11.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
